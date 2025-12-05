@@ -1,0 +1,20 @@
+{
+  "name": "centgm-frontend",
+  "version": "2.0.3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild gm.js --bundle --minify --sourcemap --outfile=dist/gm.bundle.js",
+    "build:watch": "esbuild gm.js --bundle --sourcemap --outfile=dist/gm.bundle.js --watch"
+  },
+  "dependencies": {
+    "@reown/appkit": "^1.8.10",
+    "@reown/appkit-adapter-ethers": "^1.8.10",
+    "ethers": "^6.15.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}
