@@ -65,15 +65,16 @@ body {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  color: #ffffff;
 }
 .footer-content {
   gap: 1rem;
 }
 .footer-left .logo-emoji { font-size: 1.8rem; }
-.footer-title { margin: 0; font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+.footer-title { margin: 0; font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; }
 .footer-sub { font-size: 0.75rem; color: rgba(255,255,255,0.85); }
-.footer-contact a { color: inherit; text-decoration: underline; }
-.footer-links .footer-link { color: inherit; text-decoration: none; opacity: 0.95; }
+.footer-contact a { color: #ffffff; text-decoration: underline; }
+.footer-links .footer-link { color: #ffffff; text-decoration: none; opacity: 0.95; }
 .footer-links .footer-link:hover { text-decoration: underline; opacity: 1; }
 
 @media (max-width: 576px) {
