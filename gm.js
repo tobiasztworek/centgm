@@ -17,7 +17,7 @@ import {
 } from '@reown/appkit/networks';
 
 // Version
-const APP_VERSION = '2.0.3';
+const APP_VERSION = '2.0.4';
 
 // Debug mode - set to false to disable debug logs
 const DEBUG_MODE = false;
