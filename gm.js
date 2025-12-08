@@ -2393,7 +2393,31 @@ export function init() {
   }, 5000);
 }
 
-if (typeof window !== 'undefined') { window.addEventListener('DOMContentLoaded', () => { try { init(); } catch (e) { console.error('init error', e); } }); }
+// Update version in HTML elements
+function updateVersionInHTML() {
+  const versionElements = document.querySelectorAll('.app-version, [data-version]');
+  versionElements.forEach(el => {
+    if (el.classList.contains('app-version')) {
+      el.textContent = `v${APP_VERSION}`;
+    } else if (el.hasAttribute('data-version')) {
+      const text = el.textContent;
+      el.textContent = text.replace(/v[\d.]+/, `v${APP_VERSION}`);
+    }
+  });
+}
+
+if (typeof window !== 'undefined') {
+  // Update version immediately since defer script runs after DOMContentLoaded
+  updateVersionInHTML();
+  
+  window.addEventListener('DOMContentLoaded', () => { 
+    try { 
+      init(); 
+    } catch (e) { 
+      console.error('init error', e); 
+    } 
+  }); 
+}
 // Auto-initialize when loaded in browser
 if (typeof window !== 'undefined') {
   // Global diagnostics: surface unhandled rejections and errors so we can
